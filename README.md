@@ -41,3 +41,5 @@
  > **Show your skills**. Just come up with what you have learnt and give final touches to this assignment... There's literally no restriction, you can add objects, create button, maybe introduce a videosphere!!!, make it as attractive as you can, you'll be judged on the basis of concept and not design...
  
  *That's it! Happy Aframing...*
+   
+![](a-scene.jpg)
