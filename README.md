@@ -20,12 +20,14 @@
       
   > **Create a Skybox**. Check for an equirectangular image that you can find from [Flickr](http://flickr.com/groups/equirectangular)... Then create something like this : [360image](https://aframe.io/examples/showcase/sky/)... Add cursor and camera to it... 
   
-  ### Task 2 (Score it carry : 40)
+  ### Task 3 (Score it carry : 40)
   
   > **Adding hotspots**. A hotspot it some sort of object i.e. `<a-image> , <a-box>` etc... through which you can interact. You may have seen interaction with objects for animation and might and tried too.. But for this specific task you have to create info boxes as shown: 
          
   <a href="vr.mp4" width="240" height="180" border="10" /> Video </a>
   
- You can use `<a-text>`, maybe use some `<a-image>` for the eye icon, use JS for playing with opacity... Best is to do the way you like! , just don't use simple HTML Tags (`<div> <p>`) as they don't show up on VR-Headset and also avoid usual CSS Styling other than the ones supported by A-Frame (read docs), use JS instead...
+> You can use `<a-text>`, maybe use some `<a-image>` for the eye icon, use JS for playing with opacity... Best is to do the way you like! , just don't use simple HTML Tags (`<div> <p>`) as they don't show up on VR-Headset and also avoid usual CSS Styling other than the ones supported by A-Frame (read docs), use JS instead...
     
- ### Task 3    
+ ### Task 2 (Score it carry : 40)  
+   
+   
