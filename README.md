@@ -36,4 +36,8 @@
   
 > You can use `<a-text>`, maybe use some `<a-image>` for the eye icon, use JS for playing with opacity... Best is to do the way you like! , just don't use simple HTML Tags (`<div> <p>`) as they don't show up on VR-Headset and also avoid usual CSS Styling other than the ones supported by A-Frame (read docs), use JS instead...
     
-  
+ ### Task 4 (Score it carry : 20)
+ 
+ > **Show your skills**. Just come up with what you have learnt and give final touches to this assignment... There's literally no restriction, you can add objects, create button, maybe introduce a videosphere!!!, make it as attractive as you can, you'll be judged on the basis of concept and not design...
+ 
+ *That's it! Happy Aframing...*
