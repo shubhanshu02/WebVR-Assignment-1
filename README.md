@@ -38,30 +38,10 @@
     
  ### Task 4 (Score it carry : 20)
  
- > **Show your skills**. Just come up with what you have learnt and give final touches to this assignment... There's literally no restriction, you can add objects, create button, maybe introduce a videosphere!!!, make it as attractive as you can, you'll be judged on the basis of concept and not design...
- 
+ > **Show your skills**. Just come up with what you have learnt and give final touches to this assignment... There's literally no restriction, you can add objects, create button, maybe introduce a videosphere!!!, make it as attractive as you can, you'll be judged on the basis of concept and not design. Just remember to add comments to show what extra you have done and it's functionality, push commits time to time and atleast after each task, preferably more.. :octocat:  
+   
  *That's it! Happy Aframing...*
    
 ![](a-scene.jpg)
    
-                         .sssssssss.  
-                    .sssssssssssssssssss
-                  sssssssssssssssssssssssss
-                 ssssssssssssssssssssssssssss
-                  @@sssssssssssssssssssssss@ss
-                  |s@@@@sssssssssssssss@@@@s|s
-           _______|sssss@@@@@sssss@@@@@sssss|s
-         /         sssssssss@sssss@sssssssss|s
-        /  .------+.ssssssss@sssss@ssssssss.|
-       /  /       |...sssssss@sss@sssssss...|
-      |  |        |.......sss@sss@ssss......|
-      |  |        |..........s@ss@sss.......|
-      |  |        |...........@ss@..........|
-       \  \       |............ss@..........|
-        \  '------+...........ss@...........|
-         \________ .........................|
-                  |.........................|
-                 /...........................\
-                |.............................|
-                   |.......................|
-                       |...............|
+            
