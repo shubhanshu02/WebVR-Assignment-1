@@ -32,8 +32,9 @@
   
   > **Adding hotspots**. A hotspot it some sort of object i.e. `<a-image> , <a-box>` etc... through which you can interact. You may have seen interaction with objects for animation and might have tried too.. But for this specific task you have to create info boxes as shown (not exactly the same :p): 
          
- <hr> <a href="vr.mp4"/> Video </a>
-  
+ <hr> <a href="vr.mp4"/> Video </a>  
+ Visit here [Video](https://yashrajbharti.github.io/videojs/index.html)
+   
 > You can use `<a-text>`, maybe use some `<a-image>` for the eye icon, use JS for playing with opacity... Best is to do the way you like! , just don't use simple HTML Tags (`<div> <p>`) as they don't show up on VR-Headset and also avoid CSS Styling other than the ones supported by A-Frame (read docs), use JS instead...
     
  ### Task 4 (Score it carry : 20)
