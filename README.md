@@ -25,7 +25,9 @@
      
  > **Linking 360 images:** Creating the Virtual Tour Experience can be simple enough if you can link one 360 image with another to create something like this: 
    <hr><a href="vr2.mp4"/> Video </a>
-
+     
+ Visit here [Video Website](https://yashrajbharti.github.io/netflix-and-chill/index.html)
+  
 > Hint: this can be done through javascript   
       
   ### Task 3 (Score it carry : 30)
@@ -34,7 +36,7 @@
          
  <hr> <a href="vr.mp4"/> Video </a>  
    
- Visit here [Video](https://yashrajbharti.github.io/videojs/index.html)
+ Visit here [Video Website](https://yashrajbharti.github.io/videojs/index.html)
    
 > You can use `<a-text>`, maybe use some `<a-image>` for the eye icon, use JS for playing with opacity... Best is to do the way you like! , just don't use simple HTML Tags (`<div> <p>`) as they don't show up on VR-Headset and also avoid CSS Styling other than the ones supported by A-Frame (read docs), use JS instead...
     
