@@ -49,7 +49,7 @@
 * Clone it to your Desktop or to some folder. 
 * Make necessary changes and complete the assignment.  
 * See git status to know the changes you made. 
-* One sure perform git add -u :/ , git add * :/ 
+* Once sure perform git add -u :/ , git add * :/ 
 * Then with proper commits push those changes i.e. git commit -m "my change" and then git push
 * These changes have taken place in your forked repo only. 
 * Send pull request for us to see and review those changes. 
