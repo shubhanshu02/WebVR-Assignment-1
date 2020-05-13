@@ -44,6 +44,15 @@
  
  > **Show your skills**. Just come up with what you have learnt and give final touches to this assignment... There's literally no restriction, you can add objects, create button, maybe introduce a videosphere!!!, make it as attractive as you can, you'll be judged on the basis of concept and not design. Just remember to add comments to show what extra you have done and it's functionality, push commits time to time and atleast after each task, preferably more.. :octocat:  
    
+# How to submit  
+* Fork this repo. 
+* Clone it to your Desktop or to some folder. 
+* Make necessary changes and complete the assignment.  
+* See git status to know the changes you made. 
+* One sure perform git add -u :/ , git add * :/ 
+* Then with proper commits push those changes i.e. git commit -m "my change" and then git push
+* These changes have taken place in your forked repo only. 
+* Send pull request for us to see and review those changes.   
  *That's it! Happy Aframing...*
    
 ![](a-scene.jpg)
