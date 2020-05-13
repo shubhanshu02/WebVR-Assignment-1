@@ -52,7 +52,8 @@
 * One sure perform git add -u :/ , git add * :/ 
 * Then with proper commits push those changes i.e. git commit -m "my change" and then git push
 * These changes have taken place in your forked repo only. 
-* Send pull request for us to see and review those changes.   
+* Send pull request for us to see and review those changes. 
+  
  *That's it! Happy Aframing...*
    
 ![](a-scene.jpg)
