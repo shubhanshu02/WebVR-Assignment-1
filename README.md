@@ -14,7 +14,7 @@
     
   ## Tasks
      
-   These individual tasks will be stepwise and will carry scores... Your knowledge of aframe will be the directly proportional to how many of them you can complete... The more the better for you :wink: 
+   These individual tasks will be stepwise and will carry scores... Your knowledge of aframe will be directly proportional to how many of them you can complete... The more the better for you :wink: 
    
    ### Task 1 (Score it carry : 10)
       
