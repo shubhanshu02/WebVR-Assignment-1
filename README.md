@@ -54,6 +54,9 @@
 * These changes have taken place in your forked repo only. 
 * Send pull request for us to see and review those changes. 
   
+**Deadline: Tuesday May 26th at 11:59 PM**
+  
+  
  *That's it! Happy Aframing...*
    
 ![](a-scene.jpg)
