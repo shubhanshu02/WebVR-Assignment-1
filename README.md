@@ -54,7 +54,7 @@
 * These changes have taken place in your forked repo only. 
 * Send pull request for us to see and review those changes. 
   
-**Deadline: Tuesday May 26th at 11:59 PM**
+**Deadline: Tuesday June 2nd at 11:59 PM**
   
   
  *That's it! Happy Aframing...*
