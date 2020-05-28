@@ -5,10 +5,31 @@
     </head>
     <body>
         <a-scene>
+            <a-camera id='cam'>
+                <a-cursor id="cursor"></a-cursor>
+            </a-camera>
             <a-assets>
                 <img id="home" src="equirectangular/home.jpg">
+                <img id="2" src="equirectangular/2.jpg">
+                <img id="3" src="equirectangular/3.jpg">
             </a-assets>
-            <a-sky src="#home" ></a-sky>
+            <a-sky id="0 1.6 0" src="#home"></a-sky>
+            <a-sky id="0 0 -10000" position="0 0 -10000" src="#2"></a-sky>
+            <a-sky id="0 10000 0" position="0 10000 0" src="#3"></a-sky>
+            <a-text position="-5 5 -15" color="#9b0d0d" text="width: 20; value: Hi! Welcome to VR Portal!; side: double"></a-text>
+            <a-circle position="-4.42809 6.117 -8.47856" onclick="JumpLinkFunction('0 1.6 -10000')" src="#2" side="double" material="" geometry="" rotation="0 10"></a-circle>
+            <a-circle position="0 -3 -9980" rotation="90 0 0" color="blue" side='double' onclick="JumpLinkFunction('0 1.6 0')"></a-circle>
+            <a-circle position="-50 10 -10000" rotation="0 90 0" color="red" side='double' onclick="JumpLinkFunction('0 10000 0')"></a-circle>
+            <a-circle position="5.52349 6.03167 -7.90607" onclick="JumpLinkFunction('0 10000 0')" src="#3" side="double" material="" geometry=""></a-circle>
+            <a-circle position="10 9996 -8" color="red" rotation="80 90 0" onclick="JumpLinkFunction('0 1.6 0')" src="#3" side='double'></a-circle>
+            <a-circle position="-4 9996 -28" color="blue" rotation="60 20 0" onclick="JumpLinkFunction('0 1.6 -10000')" src="#3" side='double'></a-circle>
+            <script>
+            function JumpLinkFunction(coordinates) {
+                console.log('Changed Coordinates to ' + coordinates);
+                document.getElementById('cam').setAttribute('position',coordinates);
+            }
+            </script>
+
         </a-scene>
     </body>
 </html>

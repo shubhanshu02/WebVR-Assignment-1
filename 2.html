@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>VR Portal</title>
+        <script src="aframe.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="home" src="equirectangular/home.jpg">
+                <img id="2" src="equirectangular/2.jpg">
+                <img id="3" src="equirectangular/3.jpg">
+                <img id="4" src="equirectangular/4.jpg">
+            </a-assets>
+            <!--
+            <a-box width=1 height=1 depth=1 color="black"></a-box>
+            -->
+            <a-sky id="ME" src="#3"></a-sky>
+            <a-camera>
+                <a-cursor
+                  id="cursor"
+                  animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
+                  animation__clickreset="property: scale; to: 0.1 0.1 0.1; dur: 1; startEvents: animationcomplete__click"
+                  animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing"></a-cursor>
+            </a-camera>
+
+        </a-scene>
+    </body>
+</html>
