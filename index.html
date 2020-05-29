@@ -12,6 +12,9 @@
                 <img id="home" src="equirectangular/home.jpg">
                 <img id="2" src="equirectangular/2.jpg">
                 <img id="3" src="equirectangular/3.jpg">
+                <img id='help' src="equirectangular/help.jpg">
+                <img id='1' src="equirectangular/1.png">
+                <video id="vid" autoplay loop="true" src="vr.mp4"> </video>
             </a-assets>
             <a-sky id="0 1.6 0" src="#home"></a-sky>
             <a-sky id="0 0 -10000" position="0 0 -10000" src="#2"></a-sky>
@@ -23,13 +26,24 @@
             <a-circle position="5.52349 6.03167 -7.90607" onclick="JumpLinkFunction('0 10000 0')" src="#3" side="double" material="" geometry=""></a-circle>
             <a-circle position="10 9996 -8" color="red" rotation="80 90 0" onclick="JumpLinkFunction('0 1.6 0')" src="#3" side='double'></a-circle>
             <a-circle position="-4 9996 -28" color="blue" rotation="60 20 0" onclick="JumpLinkFunction('0 1.6 -10000')" src="#3" side='double'></a-circle>
+            
+            <a-box src="#help" color="red" position="0 -1 -5"></a-box>
+            <a-text id="drop" visible="false" text="width: 12; value: Left Link Goes To the Riverside \nand\n Right Link Goes to the Mountains.; align: center; color: #1a1a1a" position="0.2 0.3 -7" rotation="-66"></a-text>
             <script>
             function JumpLinkFunction(coordinates) {
                 console.log('Changed Coordinates to ' + coordinates);
                 document.getElementById('cam').setAttribute('position',coordinates);
             }
-            </script>
 
+            document.querySelector('a-box').addEventListener('mouseenter', () => {
+                document.getElementById("drop").setAttribute('visible', 'true')
+            }); 
+            document.querySelector('a-box').addEventListener('mouseleave', () => {
+                document.getElementById("drop").setAttribute('visible', 'false')
+            }); 
+            </script>
+            
+    
         </a-scene>
     </body>
 </html>
