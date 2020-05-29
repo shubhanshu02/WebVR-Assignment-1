@@ -13,8 +13,6 @@
                 <img id="2" src="equirectangular/2.jpg">
                 <img id="3" src="equirectangular/3.jpg">
                 <img id='help' src="equirectangular/help.jpg">
-                <img id='1' src="equirectangular/1.png">
-                <video id="vid" autoplay loop="true" src="vr.mp4"> </video>
             </a-assets>
             <a-sky id="0 1.6 0" src="#home"></a-sky>
             <a-sky id="0 0 -10000" position="0 0 -10000" src="#2"></a-sky>
@@ -29,6 +27,12 @@
             
             <a-box src="#help" color="red" position="0 -1 -5"></a-box>
             <a-text id="drop" visible="false" text="width: 12; value: Left Link Goes To the Riverside \nand\n Right Link Goes to the Mountains.; align: center; color: #1a1a1a" position="0.2 0.3 -7" rotation="-66"></a-text>
+            <a-box color="green" width="1.5" height="2.3" depth="1.5" position="-8.81426 -0.34099 -10005.52517" rotation="0 -20" material="" geometry="">
+                <a-torus-knot height="1" position="0 3" color="red" material="" geometry=""></a-torus-knot>
+            </a-box>
+            <a-text position="-10.06738 10 -9990" width="20" rotation="43.56140820600136 165.28399995036423 3.672086508993446" value="A Riverside View is Always Calming, especially in such Lockdown Periods" color="blue" text="side: double; align: center"></a-text>
+            <a-text position="-20.55355 10011.91605 7.30293" width="20" rotation="33.665281168501785 137.10478967024008 2.333084141772712" value="Or If You Prefer Cold Terrains, You May Prefer This Scene" color="blue" text="width: 30; side: double; align: center"></a-text>
+
             <script>
             function JumpLinkFunction(coordinates) {
                 console.log('Changed Coordinates to ' + coordinates);
@@ -42,8 +46,7 @@
                 document.getElementById("drop").setAttribute('visible', 'false')
             }); 
             </script>
-            
-    
+
         </a-scene>
     </body>
 </html>
