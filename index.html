@@ -5,48 +5,85 @@
     </head>
     <body>
         <a-scene>
+            <!-- FOR CURSOR LOCATION AND SELECTION -->
             <a-camera id='cam'>
                 <a-cursor id="cursor"></a-cursor>
             </a-camera>
+           
+            <!-- ASSETS FOR THE A-FRAME -->
             <a-assets>
                 <img id="home" src="equirectangular/home.jpg">
+                <img id="1" src="equirectangular/1.jpg">
                 <img id="2" src="equirectangular/2.jpg">
                 <img id="3" src="equirectangular/3.jpg">
                 <img id='help' src="equirectangular/help.jpg">
             </a-assets>
-            <a-sky id="0 1.6 0" src="#home"></a-sky>
-            <a-sky id="0 0 -10000" position="0 0 -10000" src="#2"></a-sky>
-            <a-sky id="0 10000 0" position="0 10000 0" src="#3"></a-sky>
-            <a-text position="-5 5 -15" color="#9b0d0d" text="width: 20; value: Hi! Welcome to VR Portal!; side: double"></a-text>
-            <a-circle position="-4.42809 6.117 -8.47856" onclick="JumpLinkFunction('0 1.6 -10000')" src="#2" side="double" material="" geometry="" rotation="0 10"></a-circle>
-            <a-circle position="0 -3 -9980" rotation="90 0 0" color="blue" side='double' onclick="JumpLinkFunction('0 1.6 0')"></a-circle>
-            <a-circle position="-50 10 -10000" rotation="0 90 0" color="red" side='double' onclick="JumpLinkFunction('0 10000 0')"></a-circle>
-            <a-circle position="5.52349 6.03167 -7.90607" onclick="JumpLinkFunction('0 10000 0')" src="#3" side="double" material="" geometry=""></a-circle>
-            <a-circle position="10 9996 -8" color="red" rotation="80 90 0" onclick="JumpLinkFunction('0 1.6 0')" src="#3" side='double'></a-circle>
-            <a-circle position="-4 9996 -28" color="blue" rotation="60 20 0" onclick="JumpLinkFunction('0 1.6 -10000')" src="#3" side='double'></a-circle>
             
-            <a-box src="#help" color="red" position="0 -1 -5"></a-box>
-            <a-text id="drop" visible="false" text="width: 12; value: Left Link Goes To the Riverside \nand\n Right Link Goes to the Mountains.; align: center; color: #1a1a1a" position="0.2 0.3 -7" rotation="-66"></a-text>
-            <a-box color="green" width="1.5" height="2.3" depth="1.5" position="-8.81426 -0.34099 -10005.52517" rotation="0 -20" material="" geometry="">
-                <a-torus-knot height="1" position="0 3" color="red" material="" geometry=""></a-torus-knot>
+            <!-- STARTING SKYBOX -->
+            <a-sky src="#1"></a-sky>
+            
+            <a-box color="red" material="color: #220202" geometry="height: 2" position="0 2 -4">
+                <a-box id="switch" onclick="start()" color="blue" material="color: #5e6865" geometry="depth: 0.5; height: 1.2; width: 0.7" position="0 0 0.43" rotation="-15 0 0"></a-box>
             </a-box>
-            <a-text position="-10.06738 10 -9990" width="20" rotation="43.56140820600136 165.28399995036423 3.672086508993446" value="A Riverside View is Always Calming, especially in such Lockdown Periods" color="blue" text="side: double; align: center"></a-text>
-            <a-text position="-20.55355 10011.91605 7.30293" width="20" rotation="33.665281168501785 137.10478967024008 2.333084141772712" value="Or If You Prefer Cold Terrains, You May Prefer This Scene" color="blue" text="width: 30; side: double; align: center"></a-text>
+            <script>
+                function start() {
+                  document.querySelector('#switch').setAttribute('rotation', "15 0 0");
+                  setTimeout(function(){
+                    document.getElementById('cam').setAttribute('position', "0 1.5 10000");
+                    document.getElementById('cursor').setAttribute('position', "0 1.5 10000");
+                  }, 1000); 
+                }
+              </script>
+
+            <!-- PRIMARY SKYBOX -->
+            <a-sky id="0 1.5 10000" src="#home" position="0 0 10000" animation__fadeout="startEvents: fadein; property: material.opacity; from: 0.5; to: 1; dur: 1000;"></a-sky>
+            <a-text position="-5 5 9985" color="#9b0d0d" text="width: 20; value: Hi! Welcome to VR Portal!; side: double"></a-text>
+            <a-circle position="-4.42809 6.117 9991.5" onclick="JumpLinkFunction('0 1.6 -10000')" src="#2" side="double" material="" geometry="" rotation="0 10"></a-circle>
+            <a-circle position="5.52349 6.03167 9992" onclick="JumpLinkFunction('0 10000 0')" src="#3" side="double" material="" geometry=""></a-circle>
+            <a-box src="#help" color="red" position="0 -1 9995" material="" geometry="" animation__hel="dur: 4000; easing: linear; property: rotation; to: 0 360 0; loop: true; startEvents: start-rot; pauseEvents: end-rot" id="HEL"></a-box>
+            <a-text id="drop" visible="false" text="width: 12; value: Left Link Goes To the Riverside \nand\n Right Link Goes to the Mountains.; align: center; color: #1a1a1a" position="0.2 0.3 9993" rotation="-66"></a-text>
 
             <script>
+                // Make the help text visible when the mouse hovers over the box
+                document.querySelector('#HEL').addEventListener('mouseenter', () => {
+                    document.getElementById("drop").setAttribute('visible', 'true');
+                }); 
+                document.querySelector('#HEL').addEventListener('mouseleave', () => {
+                    document.getElementById("drop").setAttribute('visible', 'false')
+                }); 
+                // Add Cursor Hover Event Listener to the box in the Primary Skybox
+                document.getElementById('HEL').addEventListener('mouseenter', () => {
+                    document.querySelector('#HEL').emit('end-rot');
+                });
+                document.getElementById('HEL').addEventListener('mouseleave', () => {
+                    document.querySelector('#HEL').emit('start-rot');
+                });
+            </script>
+
+            <!-- LEFT SKYBOX -->
+            <a-sky id="0 0 -10000" position="0 0 -10000" src="#2"></a-sky>
+            <a-circle position="0 -3 -9980" rotation="90 0 0" color="blue" side='double' onclick="JumpLinkFunction('0 1.5 10000')"></a-circle>
+            <a-circle position="-50 10 -10000" rotation="0 90 0" color="red" side='double' onclick="JumpLinkFunction('0 10000 0')"></a-circle>
+            <a-box color="green" width="1.5" height="2.3" depth="1.5" position="-8.81426 -0.34099 -10005.52517" rotation="0 -20" material="" geometry="">
+                <a-torus-knot height="1" position="0 3" color="red" material="" geometry="" animation__foodle="dur:2000; easing: linear; loop:true; property: rotation; to: 0 360 360" id="foodle"></a-torus-knot>
+            </a-box>
+            <a-text position="-10.06738 10 -9990" width="20" rotation="43.56140820600136 165.28399995036423 3.672086508993446" value="A Riverside View is Always Calming, especially in such Lockdown Periods" color="blue" text="side: double; align: center"></a-text>
+
+            <!-- RIGHT SKYBOX -->
+            <a-sky id="0 10000 0" position="0 10000 0" src="#3"></a-sky>
+            <a-circle position="10 9996 -8" color="red" rotation="80 90 0" onclick="JumpLinkFunction('0 1.5 10000')" src="#3" side='double'></a-circle>
+            <a-circle position="-4 9996 -28" color="blue" rotation="60 20 0" onclick="JumpLinkFunction('0 1.5 -10000')" src="#3" side='double'></a-circle>
+            <a-text position="-20.55355 10011.91605 7.30293" width="20" rotation="33.665281168501785 137.10478967024008 2.333084141772712" value="Or If You Prefer Cold Terrains, You May Prefer This Scene" color="blue" text="width: 30; side: double; align: center"></a-text>
+
+        </a-scene>
+        <script>
+            // Start the rotation for the help box
+            document.querySelector('#HEL').emit('start-rot');
+            // Function to change the coordinates of the camera i.e. user
             function JumpLinkFunction(coordinates) {
                 console.log('Changed Coordinates to ' + coordinates);
                 document.getElementById('cam').setAttribute('position',coordinates);
             }
-
-            document.querySelector('a-box').addEventListener('mouseenter', () => {
-                document.getElementById("drop").setAttribute('visible', 'true')
-            }); 
-            document.querySelector('a-box').addEventListener('mouseleave', () => {
-                document.getElementById("drop").setAttribute('visible', 'false')
-            }); 
-            </script>
-
-        </a-scene>
+        </script>
     </body>
 </html>
