@@ -1,5 +1,12 @@
 # WebVR Assignment 1 :octocat:
     
+## Update: 
+# About the Project 
+The project opens with a switch just like an electric switch to demanding a click to proceed. Next, it opens another skybox with two circular links to other skyboxes. To decide which one to select, there's a cube in the primary that acts a hotspot.
+
+Each of the three skyboxes that you'll see after switching on the switch has exactly two links to the other skyboxes. Some text is there in each of the skyboxes. That's all for now.
+
+**Note**: Please run the file with an **active internet connection** for the fonts to load
 ## Objective: Virtual tour    
          
   The Objective of this assignment is to create a Virtual WebVR experience using A-Frame through which y'all will get to familiarize yourself with the basic functioning of A-Frame and learn to **create photospheres, assigning controls to buttons, interaction with objects**. The individual tasks will be - **Stepwise, they would carry scores, and shall to the point** 🎯... Don't tryna copy someone else's work..(we can easily figure out :innocent:).  
