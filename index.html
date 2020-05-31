@@ -30,7 +30,6 @@
                   document.querySelector('#switch').setAttribute('rotation', "15 0 0");
                   setTimeout(function(){
                     document.getElementById('cam').setAttribute('position', "0 1.5 10000");
-                    document.getElementById('cursor').setAttribute('position', "0 1.5 10000");
                   }, 1000); 
                 }
               </script>
@@ -40,7 +39,7 @@
             <a-text position="-5 5 9985" color="#9b0d0d" text="width: 20; value: Hi! Welcome to VR Portal!; side: double"></a-text>
             <a-circle position="-4.42809 6.117 9991.5" onclick="JumpLinkFunction('0 1.6 -10000')" src="#2" side="double" material="" geometry="" rotation="0 10"></a-circle>
             <a-circle position="5.52349 6.03167 9992" onclick="JumpLinkFunction('0 10000 0')" src="#3" side="double" material="" geometry=""></a-circle>
-            <a-box src="#help" color="red" position="0 -1 9995" material="" geometry="" animation__hel="dur: 4000; easing: linear; property: rotation; to: 0 360 0; loop: true; startEvents: start-rot; pauseEvents: end-rot" id="HEL"></a-box>
+            <a-box src="#help" color="red" position="0 -1 9995" material="" geometry="" animation__hel="dur: 4000; easing: linear; property: rotation; to: 0 360 0; loop: true; pauseEvents: end-rot; resumeEvents: start-rot" id="HEL"></a-box>
             <a-text id="drop" visible="false" text="width: 12; value: Left Link Goes To the Riverside \nand\n Right Link Goes to the Mountains.; align: center; color: #1a1a1a" position="0.2 0.3 9993" rotation="-66"></a-text>
 
             <script>
